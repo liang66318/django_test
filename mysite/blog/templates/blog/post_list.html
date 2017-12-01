@@ -1,0 +1,17 @@
+<html>
+<meta http-equiv="refresh" content="1800" />
+    <div>
+    <h1><a href="/">Django Test</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <span><img src="{{ post.picture }}", width="50%"></span>
+        <h1>
+            <a href="/?url_k={{ post.detailed }}">{{ post.title }}</a></h1>
+        <p>published: {{ post.created_time }}</p>
+        <p>{{ post.text}}</p>
+    </div>
+{% endfor %}
+
+</html>
