@@ -60,6 +60,6 @@ def post_list(request):
 
 
 
-        posts = Post.objects.filter(created_time__isnull=False).order_by('created_time')
+        posts = Post.objects.filter(created_time__isnull=False)
         return render(request, 'blog/post_list.html', {'posts': posts})
 
